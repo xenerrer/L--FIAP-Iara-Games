@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F2F0F8;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #013881;
+    color: white;
+}
+
+.logo-iara{
+    max-width: 150px; /* Ajuste este valor conforme necessário */
+    height: auto; /* Isso garante que a altura se ajuste proporcionalmente à largura */
+    padding-left: 2rem;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-link, .login-link {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-left: 2rem;
+    color: #F1F0F0;
+    text-decoration: none;
+}
+
+.search-container {
+    margin-left: 2rem;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    border: none;
+}
+
+.user-placeholder {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-left: 2rem;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+/*------------------- Estilização dos Banners -----------------------------*/
+
+.featured-banner-placeholder {
+    width: calc(100% - 2rem); /* Respiro lateral */
+    height: 30rem; /* Espaçamento aumentado do placeholder azul principal */
+    margin: 1rem; /* Respiro para o banner */
+    margin-top: 6rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-banner{
+    width: 100%;  /* Ajusta para a largura total do container */
+    height: 100%; /* Ajusta para a altura total do container */
+    object-fit: cover; /* Mantém a proporção da imagem sem cortes */
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: slideShow 10s infinite;
+}
+
+
+.main-content {
+    padding: 1rem;
+}
+
+.section-launches h2, .section-mmorpg h2 {
+    color: #013881;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 2rem 0; /* Espaçamento aumentado para o título */
+}
+
+/* ---------------------------------- Estilização dos Banners ------------------------------------*/
+
+.game-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adicione um espaço entre os cartões */
+    justify-content: center; /* Alinhe os cartões de forma centralizada */
+
+}
+
+.game-card {
+    width: calc(20% - 1rem); /* Calcula a largura para 5 cartões por linha menos o gap */
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Mantém o aspect ratio dos game cards */
+.game-card::before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* Ajusta a altura para ser a mesma que a largura */
+}
+
+.game-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.game-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço disponível sem distorção */
+    object-position: center; /* Centraliza a imagem no card */
+    display: block; /* Remove o espaço abaixo da imagem */
+    border-radius: 0.5rem; /* Se desejar que as imagens também tenham bordas arredondadas */
+}
+
+.game-card {
+    flex: 1;
+    min-width: calc(20% - 2rem);
+    height: 20rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o zoom */
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.game-card-overlay {
+    position: absolute;
+    top: 50;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.game-card:hover .game-card-overlay {
+    opacity: 1;
+}
+
+.game-info {
+    text-align: center;
+    color: white;
+}
+
+.game-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-price-container {
+    display: flex;
+    align-items: center;
+}
+
+.carrinho-icon {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
+
+.game-price {
+    font-size: 1.5rem;
+    color: #00ff00; /* Cor verde para o preço */
+}
+
+.game-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% quando o mouse passa sobre ele */
+}
+
+
+
+.see-more-games {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #013881;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    float: right; /* Alinhado à direita */
+    text-decoration: none;  
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+
+
+
+    .header {
+        flex-direction: column;
+        align-items: center; /* Para centralizar os itens no mobile */
+    }
+
+
+    
+    .nav-link, .search-input, .user-placeholder, .login-link {
+        margin-top: 1rem; /* Espaço no topo para cada link quando estiver no modo coluna */
+        
+    }
+
+    .navigation, .login-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .search-container, .login-container {
+        width: 100%; /* Faz a barra de pesquisa e o login ocuparem toda a largura disponível */
+        margin-top: 1rem;
+    }
+
+    .search-input {
+        width: calc(100% - 2rem); /* Deixa um respiro lateral na barra de pesquisa */
+    }
+
+    .game-cards-container {
+        width: auto;
+        gap: 1rem; /* Menor espaço entre os cartões no mobile */
+        margin-top: 1rem;
+    }
+
+    .game-card-placeholder {
+        width: calc(100%); /* Dois cartões por linha com respiro entre eles */
+    }
+
+    .see-more-games {
+        margin-top: 1rem; /* Espaçamento acima do botão 'Veja mais jogos' */
+        float: none; /* Anula o float para evitar desalinhamento */
+        display: block; /* Garante que o botão ocupe sua própria linha */
+        width: 100%; /* Ocupa a largura total */
+        text-align: center; /* Centraliza o texto dentro do botão */
+    }
+
+    .section-launches, .section-mmorpg {
+        text-align: center; /* Centraliza os títulos das seções no mobile */
+    }
+
+    .section-title {
+        display: inline-block; /* Permite que o título seja centralizado corretamente */
+        width: auto; /* Permite que o título cresça conforme o necessário */
+    }
+
+    .game-card {
+        width: calc(100%);
+    }
+}
+
