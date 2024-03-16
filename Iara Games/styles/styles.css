@@ -287,3 +287,186 @@ body {
     }
 }
 
+/*------------------------------------------------Segunda Página-------------------------------------------*/
+
+/* CSS específico para a página de detalhes */
+
+.detail-header {
+    background-color: #013881;
+    padding: 1rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-logo-iara {
+    height: 3rem; /* Ajuste o tamanho do logo conforme necessário */
+}
+
+.detail-navigation .detail-nav-link,
+.detail-login-container .detail-login-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.detail-search-container {
+    position: relative;
+}
+
+.detail-search-input {
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.detail-login-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.detail-user-placeholder {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.detail-main-content {
+    background-color: #F2F0F8;
+    padding: 1rem;
+}
+
+.detail-section-detail {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.detail-game-info-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detail-game-image {
+    width: 200px;
+    height: 200px;
+    background-color: #e4e4e4;
+    border-radius: 0.5rem;
+}
+
+.detail-game-description {
+    flex-grow: 1;
+}
+
+.detail-game-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #013881;
+    margin-bottom: 0.5rem;
+}
+
+.detail-tags-container {
+    margin-bottom: 1rem;
+}
+
+.detail-tag {
+    display: inline-block;
+    background-color: #e0f5ff;
+    color: #0366d6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.detail-description-text {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.detail-add-to-cart-button {
+    background-color: #0366d6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.detail-screenshot-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.detail-game-screenshot {
+    flex: 1;
+    height: 200px; /* Mantém a altura fixa */
+    background-color: #e4e4e4;
+    border-radius: 0.5rem;
+}
+
+.detail-promotional-banner {
+    width: 100%;
+    height: 300px; /* Mantém a altura fixa */
+    background-color: #e4e4e4;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .detail-navigation,
+    .detail-login-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .detail-search-container,
+    .detail-login-container {
+        width: 100%;
+    }
+
+    .detail-search-input {
+        width: 100%;
+    }
+
+    .detail-game-info-container {
+        flex-direction: column;
+    }
+
+    .detail-screenshot-container {
+        flex-direction: column;
+    }
+
+    .detail-game-screenshot {
+        width: 100%;
+        height: auto; /* Altura automática para se ajustar à largura */
+        margin-bottom: 1rem;
+    }
+
+    .detail-promotional-banner {
+        height: auto; /* Altura automática para se ajustar à largura */
+    }
+}
+
+
+
+
+
+
+
